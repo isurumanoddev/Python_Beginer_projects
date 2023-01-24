@@ -1,5 +1,28 @@
-months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
-number = [1,2,3,4,5,6,7,8,9,10,11,12]
+class A:
+   def __init__(self, c):
+       print("---------Inside class A----------")
+       self.c = c
+   print("Print inside A.")
 
-map = {key:value for (key,value) in zip(months,number)}
-print(map)
+   def alpha(self):
+       c = self.c + 1
+       return c
+
+print(dir(A))
+print("Instantiating A..")
+a = A(1)
+print(a.alpha())
+
+class B:
+   def __init__(self, a):
+       print("---------Inside class B----------")
+       self.a = a
+
+   print(a.alpha())
+   d = 5
+   print(d)
+   print(a)
+
+print("Instantiating B..")
+b = B(a)
+print(a)
