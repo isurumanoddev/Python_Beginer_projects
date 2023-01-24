@@ -32,7 +32,6 @@ def to_mod_list(employee_list):
     return modlist
 
 
-to_mod_list(employee_list)
 
 
 # raise NotImplementedError()
@@ -58,9 +57,13 @@ def generate_usernames(mod_list):
     Returns:
        list - A list of usernames consisting of name + department delimited by underscores.
     """
-    ### WRITE SOLUTION CODE HERE
+    new_list = [employee.replace(" ", "_") for employee in mod_list]
 
-    raise NotImplementedError()
+
+    return new_list
+
+# raise NotImplementedError()
+# generate_usernames(mod_list)
 
 
 def map_id_to_initial(employee_list):
@@ -78,18 +81,28 @@ def map_id_to_initial(employee_list):
     Returns:
        dict - A dictionary mapping an employee's id (value) to their first initial (key).
     """
-    ### WRITE SOLUTION CODE HERE
 
-    raise NotImplementedError()
+    first_letter = []
+    employee_id = []
+    for id in employee_list:
+        employee_id.append(id["id"])
+    for emp in employee_list:
+        first_letter.append(emp["name"][0])
+    dict = {key:value for (key,value) in zip(first_letter,employee_id)}
+    return dict
+    # print(dict)
+    # raise NotImplementedError()
 
-# def main():
-#     mod_emp_list = to_mod_list(employee_list)
-#     print("Modified employee list: " + str(mod_emp_list) + "\n")
-#
-#     print(f"List of usernames: {generate_usernames(mod_emp_list)}\n")
-#
-#     print(f"Initials and ids: {map_id_to_initial(employee_list)}")
-#
-#
-# if __name__ == "__main__":
-#     main()
+
+
+def main():
+    # mod_emp_list = to_mod_list(employee_list)
+    # print("Modified employee list: " + str(mod_emp_list) + "\n")
+    #
+    # print(f"List of usernames: {generate_usernames(mod_emp_list)}\n")
+
+    print(f"Initials and ids: {map_id_to_initial(employee_list)}")
+
+
+if __name__ == "__main__":
+    main()
