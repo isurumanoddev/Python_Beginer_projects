@@ -17,6 +17,14 @@ class TicTacToe:
         for row in number_board:
             print("| " + " | ".join(row) + " |")
 
+    def available_move(self):
+
+        moves = [i for i,spot in enumerate(self.board)  if spot == ' ']
+        print(moves)
+
+
+
 toe = TicTacToe()
 
-toe.print_board_numbers()
+
+toe.available_move()
