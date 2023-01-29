@@ -4,7 +4,7 @@ def read_file(file_name):
         contents = file.read()
     return contents
 
-    raise NotImplementedError()
+    # raise NotImplementedError()
 
 
 def read_file_into_list(file_name):
@@ -15,7 +15,7 @@ def read_file_into_list(file_name):
             list.append(line)
     return list
 
-    raise NotImplementedError()
+    # raise NotImplementedError()
 
 
 def write_first_line_to_file(file_contents, output_filename):
@@ -25,7 +25,7 @@ def write_first_line_to_file(file_contents, output_filename):
     with open(output_filename, 'w') as file:
         file.write(first_newline)
 
-    raise NotImplementedError()
+    # raise NotImplementedError()
 
 
 def read_even_numbered_lines(file_name):
@@ -40,7 +40,7 @@ def read_even_numbered_lines(file_name):
                 list.append(split)
     return list
 
-    raise NotImplementedError()
+    # raise NotImplementedError()
 
 
 def read_file_in_reverse(file_name):
