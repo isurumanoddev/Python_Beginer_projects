@@ -3,4 +3,4 @@ replacement_cycle = 5
 computers_per_year = total_computers/replacement_cycle
 
 
-print(computers_per_year) # Should print 120.0
+print(computers_per_year)
